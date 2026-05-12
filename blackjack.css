@@ -1,0 +1,52 @@
+body {
+    font-family: Trebuchet MS;
+background-image: url("images.jpg");
+ background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: white;
+
+
+}
+
+h1{
+    color: goldenrod;
+display: block;
+}
+.cards,.sum{
+    color:black;
+   
+    
+    display: block;
+
+}
+.container {
+    margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+background-color: rgb(255, 255, 255);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+      margin-left: 500px;
+    margin-right: 500px;
+
+  
+}
+.start-btn {
+    background-color: goldenrod;
+    color: green;
+    border: none;
+    padding: 10px 20px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Trebuchet MS;
+    border-radius: 5px;
+
+}
