@@ -20,10 +20,22 @@ if (sum <= 20) {
     message = "You're out of the game! "
     isAlive = false
 
-}
-messageEl.textContent = message
+}messageEl.textContent = message
 sumEml.textContent = "Sum: " + sum
-
 }
+
+function newcard(){
+    console.log("Drawing a new card from the deck!")
+    
+    let card = 7
+
+    sum += card
+    
+    Startgame()
+}
+
+
+
+
 
 
