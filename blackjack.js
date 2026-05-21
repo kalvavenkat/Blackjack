@@ -28,9 +28,12 @@ function rendergame() {
     }
 if (sum <= 20) {
     message = "Do you want to draw a new card? "
+    isAlive = true
+
 } else if (sum === 21) {
     message = "Wohoo! You've got Blackjack! "
     hasBlackJack = true
+
 } else {
     message = "You're out of the game! "
     isAlive = false
@@ -38,8 +41,10 @@ if (sum <= 20) {
 }messageEl.textContent = message
 sumEl.textContent = "Sum: " + sum
 }
-if(isAlive === true && hasBlackJack === false){
 function newcard(){
+if(isAlive === true && hasBlackJack === false){
+
+
     console.log("Drawing a new card from the deck!")
     
     let card = getRandomCard()
@@ -59,8 +64,10 @@ if(value===1){
 else if(value>10){
     return 10
 }
-else{    return value
+else{ 
+       return value
 }
+
 }
 
 
