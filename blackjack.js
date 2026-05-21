@@ -1,18 +1,23 @@
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let sum = firstCard + secondCard
+let cards = []
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 
 let messageEl = document.getElementById("message-el")
-let sumEml=document.getElementById("sum-el")
+let sumEl=document.getElementById("sum-el")
 let cardsEl=document.getElementById("cardsel")
 console.log(messageEl)
 
-let cards = [firstCard, secondCard]
+
 
 function Startgame() {
+isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+
     rendergame()
 }
 
@@ -31,9 +36,9 @@ if (sum <= 20) {
     isAlive = false
 
 }messageEl.textContent = message
-sumEml.textContent = "Sum: " + sum
+sumEl.textContent = "Sum: " + sum
 }
-
+if(isAlive === true && hasBlackJack === false){
 function newcard(){
     console.log("Drawing a new card from the deck!")
     
@@ -43,13 +48,20 @@ function newcard(){
     cards.push(card)
     rendergame()
 }
+}
 function getRandomCard(){
-return  Math.floor(Math.random()*13+1)
+
+let value=Math.floor(Math.random()*13+1)
+if(value===1){
+    return 11
 
 }
-
-
-
+else if(value>10){
+    return 10
+}
+else{    return value
+}
+}
 
 
 
